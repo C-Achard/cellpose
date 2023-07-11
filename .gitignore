@@ -154,3 +154,4 @@ cython_debug/
 # data
 somatomotor_stacks/*
 visual_stacks/*
+*.tif
