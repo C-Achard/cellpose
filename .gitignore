@@ -155,3 +155,4 @@ cython_debug/
 somatomotor_stacks/*
 visual_stacks/*
 *.tif
+*.cellpose
