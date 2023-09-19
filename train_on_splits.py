@@ -4,8 +4,8 @@ from tifffile import imread
 import numpy as np
 import pathlib as pt
 
-VAL_PERCENT = 0.4
-SAVE_NAME ="c1245_v_6040.cellpose" 
+VAL_PERCENT = 0.2
+SAVE_NAME ="c1-5_8020_radius6.cellpose"
 
 def convert_2d(images_array, images_names=None, dtype=np.float32):
     images_2d = []
@@ -20,8 +20,8 @@ def convert_2d(images_array, images_names=None, dtype=np.float32):
 if __name__ == "__main__":
     # path_images = pt.Path().home() / "Desktop/Code/CELLSEG_BENCHMARK/TPH2_mesospim/TRAINING"
     path_images = pt.Path("/data/cyril/CELLSEG_BENCHMARK/TPH2_mesospim/TRAINING")
-    # path_images = path_images / "SPLITS"
-    path_images = path_images / "SPLITS/3_c1245_visual"
+    path_images = path_images / "ALL"
+    # path_images = path_images / "SPLITS/3_c1245_visual"
     X_paths = sorted(glob(str(path_images / '*.tif')))
     Y_paths = sorted(glob(str(path_images / 'labels/*.tif')))
 
@@ -54,7 +54,7 @@ if __name__ == "__main__":
         gpu=True,
         pretrained_model=False,
         model_type=None,
-        diam_mean=3.3,
+        diam_mean=6, # 3.3,
         # nchan=1,
     )
     model.train(
