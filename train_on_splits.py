@@ -4,8 +4,8 @@ from tifffile import imread
 import numpy as np
 import pathlib as pt
 
-VAL_PERCENT = 0.2
-SAVE_NAME ="c1-5_8020_radius6.cellpose"
+VAL_PERCENT = 0.8
+SAVE_NAME ="c1-5_2080_radius5.cellpose"
 
 def convert_2d(images_array, images_names=None, dtype=np.float32):
     images_2d = []
@@ -54,7 +54,7 @@ if __name__ == "__main__":
         gpu=True,
         pretrained_model=False,
         model_type=None,
-        diam_mean=6, # 3.3,
+        diam_mean=5, # 3.3,
         # nchan=1,
     )
     model.train(
