@@ -6,6 +6,7 @@ import pathlib as pt
 
 VAL_PERCENT = 0.2
 SAVE_NAME ="c1-4_v_8020_radius5.cellpose"
+CELL_MEAN_DIAM = 5
 
 def convert_2d(images_array, images_names=None, dtype=np.float32):
     images_2d = []
@@ -55,13 +56,14 @@ if __name__ == "__main__":
     print(f"VAL_PERCENT : {VAL_PERCENT}")
     print(f"SAVE_NAME : {SAVE_NAME}")
     print(f"Path images : {path_images}")
+    print(f"cell_mean_diam : {CELL_MEAN_DIAM}")
     print("*"*20)
 
     model = CellposeModel(
         gpu=True,
         pretrained_model=False,
         model_type=None,
-        diam_mean=5, # 3.3,
+        diam_mean=CELL_MEAN_DIAM, # 3.3,
         # nchan=1,
     )
     model.train(
