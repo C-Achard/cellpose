@@ -152,7 +152,8 @@ cython_debug/
 #.idea/
 
 # data
-somatomotor_stacks/*
-visual_stacks/*
+cellpose/somatomotor_stacks/*
+cellpose/visual_stacks/*
+cellpose/stacks/*
 *.tif
 *.cellpose
