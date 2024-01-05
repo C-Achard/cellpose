@@ -4,7 +4,7 @@ from tifffile import imread
 import numpy as np
 import pathlib as pt
 
-VAL_PERCENT = 0.01
+VAL_PERCENT = 1e-4
 SAVE_PATH = pt.Path("/data/cyril") / "CELLSEG_BENCHMARK/cellseg3d_train" / "SUP_PERF_FIG"
 
 def convert_2d(images_array, images_names=None, dtype=np.float32):
