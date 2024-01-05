@@ -5,6 +5,8 @@ import numpy as np
 import pathlib as pt
 
 VAL_PERCENT = 0.01
+SAVE_PATH = pt.Path("/data/cyril") / "CELLSEG_BENCHMARK/cellseg3d_train" / "SUP_PERF_FIG"
+
 def convert_2d(images_array, images_names=None, dtype=np.float32):
     images_2d = []
     images_names_2d = [] if images_names is not None else None
