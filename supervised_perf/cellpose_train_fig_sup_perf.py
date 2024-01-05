@@ -68,7 +68,7 @@ if __name__=="__main__":
         test_data=X_val,
         test_labels=Y_val,
         test_files=X_val_paths,
-        save_path="./",
+        save_path=str(SAVE_PATH),
         save_every=50,
         n_epochs=50,
         channels=[0,0],
